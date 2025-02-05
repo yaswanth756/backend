@@ -9,7 +9,7 @@ const port=3000;
 // connection
 
 app.use(cors({ 
-    origin: 'https://yaswanth756.github.io/f/', // Adjust for subdirectory
+    origin: 'https://yaswanth756.github.io', // Adjust for subdirectory
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));

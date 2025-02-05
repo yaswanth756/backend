@@ -1,6 +1,6 @@
 var express=require("express");
 var bodyparser=require("body-parser");
-
+const cors = require('cors');
 var app=express();
 app.use(express.static(__dirname));
 app.use(bodyparser.json());
@@ -8,6 +8,11 @@ const port=3000;
 // schema
 // connection
 
+app.use(cors({ 
+    origin: 'https://yaswanth756.github.io/f/', // Adjust for subdirectory
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+}));
 
 const mysql=require("mysql");
 const db = mysql.createConnection({
